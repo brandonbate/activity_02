@@ -35,4 +35,4 @@ python functional_tests.py
 
 This should display an error.
 
-Your task is to modify ```my_page.html``` so that it can pass all the tests in ```functional_tests.py```. I have placed comments in ```my_page.html`` help guide you toward this. I also include ```my_page.css```, which specifies the display properties of our html document. After you have passed all the tests, feel free to play around with the these files to make a more appealing web page. Just be sure that any changes you make don't cause you to fail the test.
+Your task is to modify ```my_page.html``` so that it can pass all the tests in ```functional_tests.py```. I have placed comments in ```my_page.html``` help guide you toward this. I also include ```my_page.css```, which specifies the display properties of our html document. After you have passed all the tests, feel free to play around with the these files to make a more appealing web page. Just be sure that any changes you make don't cause you to fail the test.
