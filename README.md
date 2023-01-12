@@ -1,3 +1,5 @@
+# Activity #2 - HTML and CSS
+
 To get started, you'll need to create a folder to store activities for this course. I used the folder name ```activities```. 
 Navigate to this folder in git bash. On this page, click on the "Code" button and under the "SSH" heading, click the "copy" button.
 In the console, run
