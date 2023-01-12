@@ -1,0 +1,97 @@
+<!-- This is a comment in HTML -->
+
+<!-- This is an HTML declaration. It tells the brower that this document
+is indeed an HTML document. This is important to include if your file
+does not end in .html or .htm. But even if your document ends with these
+extensions, it's a good practie to include it regardless. -->
+<!DOCTYPE html>
+
+<!-- All HTML documents begin an <html> tag and end with an </html>
+tag. If you've never seen HTML before, stop what you're doing and
+read this: https://www.w3schools.com/html/html_intro.asp 
+The above web page gives a nice overview of the overall structure
+of HTML and explains the purpose of many of the tags that follow. -->
+<html>
+<head>
+	<!-- This gives the title on the tab for this web page -->
+	<title>Boring Title</title>
+
+	<!-- Text characters are encoded in a variety of formats. This
+	tells the web browser the character encoding we're using. You
+	can get away without including this, but it is a good  practice. -->
+	<meta charset="utf-8"> 
+	
+	<!-- This tag enables browsers to appropriately resize our
+	web content on small screens. If you are interested, you can
+	read more about this at: 
+		https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- In a word processor, the content you write (i.e. words) and
+	the display style (font, font size, etc.) are inextricably linked.
+	Not so with web content. An HTML document contains contains content
+	nested within tags. The display properties of the tags are specified
+	in a cascading style sheet (CSS) file. This "link" tag tells the
+	browser to use my_page.css to determine the display styles for our
+	various tags. -->
+	<link rel="stylesheet" href="my_page.css">
+</head>
+
+<body>
+
+<!-- In this HTML file I'm using "semantic elements". These
+elements include the following tags: <header>, <nav>, <section>,
+<article>, <aside> and <footer>. You should think of these tags
+as creating blocks for HTML content on our web page. I have display
+properties defined in my_page.css, but without these properties
+defined, these tags basically do nothing. To see that this is the
+case, you can try commenting out the above "link" tag and see what
+happens. To fully appreciate how this web page is displayed, you will
+need to read through my_page.css. But finish reading through this
+file before you do. -->
+
+<header>
+	<!-- The h2 tag specifies a heading for a document. A heading is
+	like the title for a page. There are many different heading "sizes",
+	which good web developers specify in CSS. Read more about heading
+	tags at:
+		https://www.w3schools.com/html/html_headings.asp -->
+	<h2>Boring Heading</h2>
+</header>
+
+<nav>
+	<!-- The anchor tag <a> allows you to create links to other web pages.
+	You can read more about them here: 
+		https://www.w3schools.com/tags/tag_a.asp -->
+	<a href="#">Dead Link</a>
+</nav>
+
+<section>
+	<article>
+		<h3>Blah Blah Blah</h3>
+
+		<!-- The <p> tag is used for creating a paragraph. You can read
+		about them here: -->
+		<p> 
+			<!-- The <img> tag is used to embed images on a web page.
+			You can read more about them here:
+				https://www.w3schools.com/tags/tag_img.asp
+			The style of this image is a float. You can read about them
+			here:
+				https://www.w3schools.com/css/css_float.asp -->
+			<img src="tacobot.jpg" alt="TacoBot" style="float:right;width:50%;height:50%;">
+			Nice Picture!
+		</p>
+</article>
+  
+	<aside>
+		Side bar!
+	</aside>
+</section>
+
+<footer>
+	<p>Hard to read!</p>
+</footer>
+
+</body>
+</html>

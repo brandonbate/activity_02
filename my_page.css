@@ -1,0 +1,165 @@
+/* HTML files define the content of a web page. This content is nested
+within HTML tags (e.g. <h2>Heading</h2>). This is not an HTML file.
+It's a Cascading Style Sheet (CSS). CSS defines the display style for
+HTML tags. This often involves specifying fonts, font size, margins,
+and much, much more.*/
+
+/* This defines the display style for content enclosed in the <body>
+tag of an HTML document. */
+body {
+	/* This tells the browser to use the Arial font when displaying text
+	enclosed in the <body> tag. You can read more about how to specify
+	fonts in CSS here: https://www.w3schools.com/css/css_font.asp */
+	font-family: Arial, Helvetica, sans-serif;
+
+	/* This tells the browser what size margins to use for text enclosed
+	in the <body> tag. You can read more about how to specify margins
+	in CSS here: https://www.w3schools.com/css/css_margin.asp */
+	margin: 0;
+}
+
+/* In CSS, we have definitions of the following form:
+
+	selector {
+		property1: value1;
+		property2: value2;
+	}
+	
+The selector is, for now, the name of an HTML tag. The properties
+and values specify display characteristics for that HTML tag. You
+can find a list of CSS properties here: 
+	https://www.w3schools.com/cssref/index.php */
+
+header {
+	/* This defines a padding of 20 pixels for our heading. A padding
+	is similar to a margin. To see the difference, try changing padding
+	to margin. You can read more about paddings here:
+		https://www.w3schools.com/css/css_padding.asp */
+	padding: 20px;
+	
+	/* This specifies the text alignment to center. You can read more
+	about that here:
+		https://www.w3schools.com/cssref/pr_text_text-align.php	*/
+	text-align: center;
+	
+	/* The following define the background color and the font color for
+	the header tag. There are multiple ways to specify colors. One option
+	is to give a HEX representation of the color (e.g. #1abc9c). Another
+	option is to give a "valid" color name (e.g. white). */
+	background-color: #1abc9c;
+	color: white;
+
+	/* You can read more about how to specify colors in CSS here:
+		https://www.w3schools.com/css/css_colors.asp
+	You can find a list of valid color names here:
+		https://www.w3schools.com/colors/colors_names.asp */
+}
+
+/* The nav tag is used to display web page naviation links. 
+We say that this type of tag is a "container" for other content.
+In the past, a container might specify that all of its content
+should be displayed in a row or a column (but not both). But because
+web browsing now happens on multiple devices, we sometimes need
+the web browser to switch between these formats. If I'm viewing
+a web page from a computer, I may want the navigation bar to
+be a row. But if I'm viewing it on a smart phone, then perhaps a
+column would be more appropriate. To enable this type of flexibility,
+we set the "display" property to "flex". By default, our nav container
+will begin by align content in a row, but if that content can't
+be displayed well, it'll switch a column. */
+
+nav {
+	display: flex;
+	background-color: #333;
+	color: white;
+	padding: 10px;
+}
+
+/* A section tag is used as a container as well. Here we use the
+flex-wrap property. This tells the browser to begin by displaying
+content in a row. If the width of the display isn't large enough
+to show all the content in that row, then we continue displaying
+content into a new row beneath it. It's kind of like the word-wrap
+feature in a text editor, but for web content. You can read more
+about flex containers here:
+
+	https://www.w3schools.com/css/css3_flexbox.asp
+	https://www.w3schools.com/css/css3_flexbox_container.asp */
+
+section {  
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/* Within a <section> tag, we can place an <article> tag and
+an <aside> tag. We want the <article> tag to be the main content
+of our page, while the <aside> tag is a side-bar. We say <article>
+and <aside> are "flex items" since we intend them to be nested within
+the flex container <section>. By default, the <section> will display
+its contents in a row. By using the flex property, we can specify
+an allocation of these flex items. You can read more about flex items
+here: https://www.w3schools.com/css/css3_flexbox_items.asp */
+
+article {
+	flex: 70%;
+	background-color: CornflowerBlue;
+	padding: 20px;
+}
+
+aside {
+	flex: 30%;
+	background-color: #f1f1f1;
+	padding: 20px;
+}
+
+/* Footers occur at the bottom of a page. Nothing special
+to explain here. */
+footer {
+	padding: 20px;
+	text-align: center;
+	background: #ddd;
+	font-size: 5px;
+}
+
+/* I explain this in the comments below. */
+* {
+	box-sizing: border-box;
+}
+
+/* The * above indicates that the following property is specified for
+all HTML tags. Ideally, this should be at the top of your CSS file,
+but because the box-sizing property is more conceptually complex,
+I decided to stick it here instead. 
+
+Thus far we've used very specific container names/tags: header, nav,
+section, article, aside and footer. In HTML, these tags have no
+intrinsict meaning. It is up to you to specify their display styles
+in a CSS and to, presumably, use them appropriately. But because
+they have no intrinsict meaning, you could use the footer container
+as your navigation bar, or article as your side bar. Other people
+who look at your HTML would be confused, but the browser wouldn't care.
+That's because, in the browser's "mind", all of these fancy container
+names are really just special instances of the <div> tag.
+
+A <div> tag defines a block where web content is displayed. Blocks
+can be arranged in rows, columns and other more elaborate configurations.
+There are some rather subtle sizing issues with <div> related to padding
+and margins. By setting "box-sizing" to "border-box", we are essentially
+telling the browser how to deal with these sizing issues. You should read:
+
+https://www.w3schools.com/css/css3_box-sizing.asp
+
+to get a better idea for what a border_box sizing does. */
+
+
+/* Recall that we specified the section and nav containers as being
+flexible; that is, they can switch from displaying content in a row
+to displaying content in a column. The following tells the browser
+when to make this switch. In particular, if the viewing area is less
+than 700 pixels, then the browser will switch to to the column
+formatn. */
+@media screen and (max-width: 700px) {
+	nav, section {   
+		flex-direction: column;
+	}
+}

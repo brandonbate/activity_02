@@ -128,5 +128,5 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-my_page_answers.html
+my_page_answer.html
 virtualenv
